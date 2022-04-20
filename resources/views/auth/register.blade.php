@@ -21,6 +21,9 @@
                     <h1 class="font-bold text-3xl text-orange-600">Registro</h1>
                 </div>
 
+
+
+            <form action="">
                 <div>
                     <div class="flex -mx-3">
 
@@ -55,11 +58,12 @@
 
                     
                     <div class="flex items-baseline justify-between">
-                        <button class="font-semibold px-6 py-2 text-neutral-900 bg-orange-600 rounded-lg hover:bg-neutral-900 hover:text-orange-600">Guardar</button>
+                        <button type="submit" class="font-semibold px-6 py-2 text-neutral-900 bg-orange-600 rounded-lg hover:bg-neutral-900 hover:text-orange-600">Guardar</button>
                     </div>
                     
                     </div>
                 </div>
+            </form>
             </div>
         </div>
     </div>

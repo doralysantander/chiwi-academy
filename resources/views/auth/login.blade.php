@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="grid lg:grid-cols-2 sm:grid-cols-1 gap-4 justify-items-center p-4">
+<div class="grid lg:grid-cols-2 sm:grid-cols-1 gap-4 justify-items-center p-2">
     
     <div>
         <img src="../assets/img1.png" alt="imagen login" />
@@ -45,7 +45,8 @@
                         </div>
 
                         <div class="flex items-baseline justify-between">
-                            <button class="font-semibold px-6 py-2 mt-4 text-neutral-900 bg-orange-600 rounded-lg hover:bg-neutral-900 hover:text-orange-600">Crear cuenta</button>
+                            <button type="submit" class="font-semibold px-6 py-2 mt-4 text-neutral-900 bg-orange-600 rounded-lg hover:bg-neutral-900 hover:text-orange-600">Iniciar Sesión</button>
+                            <button class="font-semibold px-6 py-2 mt-4 text-neutral-900 bg-orange-600 rounded-lg hover:bg-neutral-900 hover:text-orange-600">Registrarse</button>
                         </div>
 
                     </div>

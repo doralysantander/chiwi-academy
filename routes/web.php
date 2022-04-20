@@ -12,3 +12,14 @@ Route::get('/', function () {
 Route::get('/login', [LoginController::class, 'create'])->name('login.index');
 
 Route::get('/register', [RegisterController::class, 'create'])->name('register.index');
+
+
+
+Route::get('/table', function () {
+    return view('table');
+});
+
+Route::get('/createEvent', function () {
+    return view('createEvent');
+});
+
