@@ -11,7 +11,16 @@
 
     </head>
     <body>
-        @livewire("nav-bar")
+        
+        <x-nav-bar/>
+        <div class="own-divWelcome">
+            <div class="own-welcomeText">
+            <x-welcome/>
+            </div>
+            
+        </div>
+
+        
 
 
 
