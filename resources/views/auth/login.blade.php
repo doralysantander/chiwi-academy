@@ -15,7 +15,7 @@
     <div>
 
         <div class="flex pt-4 items-center justify-center">
-            <div class="px-8 py-6 mt-4 text-left bg-white shadow-xl">
+            <div class="px-8 py-6 mt-4 text-left bg-white shadow-xl rounded-3xl">
                 <div class="flex justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-orange-600" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
