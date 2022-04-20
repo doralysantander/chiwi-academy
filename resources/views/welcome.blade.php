@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}"
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <title>Proyecto</title>
 </head>
 <body>
-    <h1 class="bg-blue-400">TITULO </h1>
+
+
+
     
 </body>
 </html>
