@@ -12268,6 +12268,23 @@ fieldset:disabled .btn {
 }
 
 
+/*--------------------------outstandingEventsSection page clases-------------------------------------------------*/
+
+.own-outstandingEventsSection {
+    position: relative;
+    top:60px;
+}
+
+.own-h4OutstandingEvents {
+    color: var(--bs-orange);
+    font-size: 0.75rem;
+    font-weight: 700;
+    width: fit-content;
+}
+
+.own-imgOutstandingEvents {
+    width: 100vw;
+}
 
 
 @media (min-width: 400px) {

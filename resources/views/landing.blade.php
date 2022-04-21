@@ -13,12 +13,16 @@
     <body>
         
         <x-nav-bar/>
-        <div class="own-divWelcome">
+        <section class="own-divWelcome">
             <div class="own-welcomeText">
             <x-welcome/>
-            </div>
             
-        </div>
+            </div>
+        </section>
+        <section class="own-outstandingEventsSection">
+            <x-outstanding-events/>
+        </section>
+        
 
         
 
