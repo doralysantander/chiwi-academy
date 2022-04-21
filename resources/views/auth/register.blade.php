@@ -23,35 +23,55 @@
 
 
 
-            <form action="">
+            <form method="POST" action="">
+                @csrf
+
+
                 <div>
                     <div class="flex -mx-3">
 
                         <div class="w-1/2 px-3 mb-5">
                             <label for="" class="font-semibold">Nombre</label>
-                            <input type="text" placeholder="Nombre"
-                            class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-orange-600">
-                        </div>
-
-                        <div class="w-1/2 px-3 mb-5">
-                            <label for="" class="font-semibold">Usuario</label>
-                            <input type="text" placeholder="Usuario"
+                            <input id="name" name="name" type="text" placeholder="Nombre"
                             class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-orange-600">
                         </div>
                     </div>
+
+                    @error('name')        
+                    <p class="border border-orange-500 rounded-md bg-orange-100 w-full
+                    text-orange-600 p-2 my-2">* {{ $message }}</p>
+                    @enderror
 
                     <div class="flex -mx-3">
                         <div class="w-full px-3 mb-5">
                             <label for="" class="font-semibold">Email</label>
-                            <input type="text" placeholder="Email"
+                            <input id="email" name="email" type="text" placeholder="Email"
                             class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-orange-600">
                         </div>
                     </div>
 
+                    @error('email')        
+                    <p class="border border-orange-500 rounded-md bg-orange-100 w-full
+                    text-orange-600 p-2 my-2">* {{ $message }}</p>
+                    @enderror
+
                     <div class="flex -mx-3">
-                        <div class="w-full px-3 mb-12">
+                        <div class="w-full px-3 mb-5">
                             <label for="" class="font-semibold">Contraseña</label>
-                            <input type="password" placeholder="Password"
+                            <input id="password" name="password" type="password" placeholder="Password"
+                            class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-orange-600">
+                        </div>
+                    </div>
+
+                    @error('password')        
+                    <p class="border border-orange-500 rounded-md bg-orange-100 w-full
+                    text-orange-600 p-2 my-2">* {{ $message }}</p>
+                    @enderror
+
+                    <div class="flex -mx-3">
+                        <div class="w-full px-3 mb-6">
+                            <label for="" class="font-semibold">Contraseña</label>
+                            <input id="password_confirmation" name="password_confirmation" type="password" placeholder="Password confirmation"
                             class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-orange-600">
                         </div>
                     </div>

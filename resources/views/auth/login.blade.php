@@ -28,21 +28,29 @@
                 </div>
                 <h3 class="text-2xl text-orange-600 font-bold text-center">Iniciar Sesión</h3>
                 
-                <form action="">
+                <form method="POST" action="">
+                    @csrf
+
+
                     <div class="mt-4">
                         
                         <div>
                             <label class="block font-semibold" for="email">Usuario<label>
-                                    <input type="text" placeholder="Email"
+                                    <input id="email" name="email" type="text" placeholder="Email"
                                         class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-orange-600">
                                     
                         </div>
                         
                         <div class="mt-4">
                             <label class="block font-semibold">Contraseña<label>
-                                    <input type="password" placeholder="Password"
+                                    <input id="password" name="password" type="password" placeholder="Password"
                                         class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-orange-600">
                         </div>
+
+                        @error('message')        
+                        <p class="border border-orange-500 rounded-md bg-orange-100 w-full
+                        text-orange-600 p-2 my-2">* {{ $message }}</p>
+                        @enderror
 
                         <div class="flex items-baseline justify-between">
                             <button type="submit" class="font-semibold px-6 py-2 mt-4 text-neutral-900 bg-orange-600 rounded-lg hover:bg-neutral-900 hover:text-orange-600">Iniciar Sesión</button>

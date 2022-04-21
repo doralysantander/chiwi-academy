@@ -15,12 +15,25 @@
         </div>
 
         <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
-            <li class="mx-6">
-                <a href="{{ route('register.index') }}" class="font-semibold hover:text-neutral-900 hover:bg-orange-600 hover:rounded-md py-3 px-4">Registro</a>
+
+        @if (auth()->check())
+            
+        
+            <li class="mx-8">
+                <p class="text-xl ">Bienvenido <b>{{ auth()->user()->name }}</b> </p>
             </li>
             <li>
-                <a href="{{ route('login.index') }}" class="font-semibold hover:text-neutral-900 hover:bg-orange-600 hover:rounded-md py-3 px-4">Iniciar Sesión</a>
+                <a href="{{ route('login.destroy') }}" class="font-semibold hover:text-neutral-900 hover:bg-red-600 hover:rounded-md py-3 px-4">Cerrar Sesión</a>
             </li>
+        @else 
+        <li class="mx-6">
+            <a href="{{ route('register.index') }}" class="font-semibold hover:text-neutral-900 hover:bg-orange-600 hover:rounded-md py-3 px-4">Registro</a>
+        </li>
+        <li>
+            <a href="{{ route('login.index') }}" class="font-semibold hover:text-neutral-900 hover:bg-orange-600 hover:rounded-md py-3 px-4">Iniciar Sesión</a>
+        </li>
+
+        @endif
         </ul>
     </nav>
 
