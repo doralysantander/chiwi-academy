@@ -18,13 +18,13 @@ class AuthAdmin
    
     {
         if(auth()->check()){
-            if(auth()->user()->role === 'admin'){
+            if(auth()->user()->role == 'admin'){
                 return $next($request);
             }
             
             
         }
-        return redirect()->to('/');
+        return redirect()->to('/table');
         
     }
 }

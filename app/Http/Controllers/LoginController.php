@@ -17,9 +17,14 @@ class LoginController extends Controller
             return back()->withErrors([
                 'message' => 'El email o la contraseña son incorrectos', 
             ]);
+        }else {
+            if(auth()->user()->role == 'admin' ){
+                return redirect()->route('table.index');
+            }else{
+                return redirect()->to('/');
+            }
         }
         
-        return redirect()->to('/');
     }
 
 
