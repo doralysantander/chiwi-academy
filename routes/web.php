@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MasterclassController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('master', [MasterclassController::class, 'index']);
+
+Route::post('master', [MasterclassController::class, 'create_master']);
+
+Route::get('master/{id}/edit', [MasterclassController::class, 'update_master']);
