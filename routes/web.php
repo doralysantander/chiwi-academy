@@ -7,9 +7,6 @@ use App\Http\Controllers\LoginController;
 
 
 Route::get('/', function () {
-<<<<<<< HEAD
-    return view('landing');
-=======
     return view('home');
 })->middleware('auth');
 
@@ -49,6 +46,5 @@ Route::get('/table', [AdminController::class, 'index'])
 
 Route::get('/createEvent', function () {
     return view('createEvent');
->>>>>>> dani/dev
 });
 
