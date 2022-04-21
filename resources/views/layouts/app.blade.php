@@ -11,14 +11,16 @@
 
     <nav class="flex py-8 bg-neutral-900 text-orange-600 shadow-lg">
         <div class="w-1/2 px-12 mr-auto">
-            <p class="sm:text-lg lg:text-2xl font-bold">MEETING ACÁDEMY</p>
+            <a href="{{ route('home.index') }}" class="sm:text-lg lg:text-2xl font-bold">MEETING ACÁDEMY</a>
         </div>
 
         <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
 
         @if (auth()->check())
             
-        
+            <li>
+                <a href="{{ route('profile.index') }}">ver perfil</a>
+            </li>
             <li class="mx-8">
                 <p class="text-xl ">Bienvenido <b>{{ auth()->user()->name }}</b> </p>
             </li>

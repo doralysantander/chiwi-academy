@@ -4,11 +4,12 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
-
+use App\Http\Controllers\ProfileController;
 
 Route::get('/', function () {
     return view('home');
-})->middleware('auth');
+})->middleware('auth')
+->name('home.index');
 
 
 
@@ -35,6 +36,10 @@ Route::get('/logout', [LoginController::class, 'destroy'])
 Route::get('/table', [AdminController::class, 'index'])
 ->middleware('auth.admin')
 ->name('table');
+
+Route::get('/profile', [ProfileController::class, 'index'])
+->middleware('auth')
+->name('profile.index');
 
 
 
