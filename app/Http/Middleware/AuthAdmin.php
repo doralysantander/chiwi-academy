@@ -24,7 +24,7 @@ class AuthAdmin
             
             
         }
-        return redirect()->to('/table');
+        return redirect()->to('/');
         
     }
 }
