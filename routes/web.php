@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CreateEventController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
@@ -36,15 +37,9 @@ Route::get('/table', [AdminController::class, 'index'])
 ->middleware('auth.admin')
 ->name('table');
 
+Route::get('/createEvent', [CreateEventController::class, 'index'])
+->middleware('auth.admin')
+->name('createEvent.index');
 
 
-/* Route::get('/table', function () {
-    return view('table');
-}); */
-
-
-
-Route::get('/createEvent', function () {
-    return view('createEvent');
-});
 

@@ -9,7 +9,7 @@
 <div class="py-6 grid grid-cols-2 justify-items-center">
     <div class="text-orange-600 text-4xl font-bold">EVENTOS</div>
     <div class="">
-        <button class="font-semibold px-6 py-2 mt-2 text-neutral-900 bg-orange-600 rounded-lg hover:bg-neutral-900 hover:text-orange-600">Crear evento</button>
+        <a  href="{{ route('createEvent.index') }}" class="font-semibold px-6 py-2 mt-2 text-neutral-900 bg-orange-600 rounded-lg hover:bg-neutral-900 hover:text-orange-600">Crear evento</a>
     </div>
 </div>
 
