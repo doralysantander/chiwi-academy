@@ -1,5 +1,9 @@
+<<<<<<< .merge_file_a04780
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
 @import "~bootstrap/dist/css/bootstrap.css"
+=======
+@import "~bootstrap/dist/css/bootstrap.css"
+>>>>>>> .merge_file_a11760

@@ -11,6 +11,7 @@
 
     </head>
     <body>
+<<<<<<< .merge_file_a10564
         
         <x-nav-bar/>
         <section class="own-divWelcome">
@@ -25,6 +26,9 @@
         
 
         
+=======
+        @livewire("nav-bar")
+>>>>>>> .merge_file_a10928
 
 
 
