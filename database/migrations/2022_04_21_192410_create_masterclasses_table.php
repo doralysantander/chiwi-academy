@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('masterclasses', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title')->nullable();
             $table->boolean('estado')->nullable();
             $table->date('fecha');
             $table->time('hora');
