@@ -61,5 +61,5 @@
     <br/>
     <br/>
     <div class="px-6">{{$masterClases->links()}}</div>
-    <x-footer/>
+   
 @endsection
