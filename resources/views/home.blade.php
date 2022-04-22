@@ -23,7 +23,7 @@
           <div class="mt-5 pt-10 sm:mt-8 sm:flex justify-center">
             <button
             class="p-0 w-12 h-12 bg-orange-600 rounded-full hover:bg-orange-700 active:shadow-lg mouse shadow transition ease-in duration-200 focus:outline-none">
-            <i class='fas fa-arrow-down text-white'></i>
+            <i class='fa fa-arrow-down text-white'></i>
             </button>
             
           </div>
@@ -38,135 +38,15 @@
 <h2 class="text-4xl font-bold text-orange-600 text-center pt-20 p-4"> EVENTOS DESTACADOS </h2>
 
 
-<div class="owl-container py-8 px-10">
+<div class="owl-container py-8 px-10 ">
   <div class="owl-carousel owl-theme">
 
 
-    <div class="rounded-lg">
-    
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
-          <img class="w-full" src="https://definicion.de/wp-content/uploads/2009/12/paisaje-1.jpg" alt="Sunset in the mountains">
-          <div class="px-6 py-4">
-            <div class="font-bold text-orange-600 text-2xl mb-2">Titulo</div>
-            <p class="text-gray-700 text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-            </p>
-          </div>
-          <div class="flex justify-between px-6 py-4">
-              <p class="font-bold text-orange-600">20-04-2022</p>
-              <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">Inscribirme</button>
-          </div>
-        </div>
-  </div> 
-
-
-  <div class="rounded-lg">
-    
-    <div class="max-w-sm rounded overflow-hidden shadow-lg">
-        <img class="w-full" src="https://definicion.de/wp-content/uploads/2009/12/paisaje-1.jpg" alt="Sunset in the mountains">
-        <div class="px-6 py-4">
-          <div class="font-bold text-orange-600 text-2xl mb-2">Titulo</div>
-          <p class="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div class="flex justify-between px-6 py-4">
-            <p class="font-bold text-orange-600">20-04-2022</p>
-            <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">Inscribirme</button>
-        </div>
-      </div>
-</div> 
-
-
-<div class="rounded-lg">
-    
-  <div class="max-w-sm rounded overflow-hidden shadow-lg">
-      <img class="w-full" src="https://definicion.de/wp-content/uploads/2009/12/paisaje-1.jpg" alt="Sunset in the mountains">
-      <div class="px-6 py-4">
-        <div class="font-bold text-orange-600 text-2xl mb-2">Titulo</div>
-        <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-        </p>
-      </div>
-      <div class="flex justify-between px-6 py-4">
-          <p class="font-bold text-orange-600">20-04-2022</p>
-          <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">Inscribirme</button>
-      </div>
-    </div>
-</div> 
-
-
-<div class="rounded-lg">
-    
-  <div class="max-w-sm rounded overflow-hidden shadow-lg">
-      <img class="w-full" src="https://definicion.de/wp-content/uploads/2009/12/paisaje-1.jpg" alt="Sunset in the mountains">
-      <div class="px-6 py-4">
-        <div class="font-bold text-orange-600 text-2xl mb-2">Titulo</div>
-        <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-        </p>
-      </div>
-      <div class="flex justify-between px-6 py-4">
-          <p class="font-bold text-orange-600">20-04-2022</p>
-          <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">Inscribirme</button>
-      </div>
-    </div>
-</div> 
-
-
-<div class="rounded-lg">
-    
-  <div class="max-w-sm rounded overflow-hidden shadow-lg">
-      <img class="w-full" src="https://definicion.de/wp-content/uploads/2009/12/paisaje-1.jpg" alt="Sunset in the mountains">
-      <div class="px-6 py-4">
-        <div class="font-bold text-orange-600 text-2xl mb-2">Titulo</div>
-        <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-        </p>
-      </div>
-      <div class="flex justify-between px-6 py-4">
-          <p class="font-bold text-orange-600">20-04-2022</p>
-          <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">Inscribirme</button>
-      </div>
-    </div>
-</div> 
-
-
-<div class="rounded-lg">
-    
-  <div class="max-w-sm rounded overflow-hidden shadow-lg">
-      <img class="w-full" src="https://definicion.de/wp-content/uploads/2009/12/paisaje-1.jpg" alt="Sunset in the mountains">
-      <div class="px-6 py-4">
-        <div class="font-bold text-orange-600 text-2xl mb-2">Titulo</div>
-        <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-        </p>
-      </div>
-      <div class="flex justify-between px-6 py-4">
-          <p class="font-bold text-orange-600">20-04-2022</p>
-          <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">Inscribirme</button>
-      </div>
-    </div>
-</div> 
-
-
-
-<div class="rounded-lg">
-    
-  <div class="max-w-sm rounded overflow-hidden shadow-lg">
-      <img class="w-full" src="https://definicion.de/wp-content/uploads/2009/12/paisaje-1.jpg" alt="Sunset in the mountains">
-      <div class="px-6 py-4">
-        <div class="font-bold text-orange-600 text-2xl mb-2">Titulo</div>
-        <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-        </p>
-      </div>
-      <div class="flex justify-between px-6 py-4">
-          <p class="font-bold text-orange-600">20-04-2022</p>
-          <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">Inscribirme</button>
-      </div>
-    </div>
-</div> 
+    <x-card/>
+    <x-card/>
+    <x-card/>
+    <x-card/>
+    <x-card/>
 
 
 
@@ -174,7 +54,7 @@
   </div>
 </div>
 
-
+<x-all-events/>
 
 
 @endsection
