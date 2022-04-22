@@ -55,6 +55,7 @@
 </div>
 
 <x-all-events/>
+<x-pagination/>
 
 <x-banner/>
 
