@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="{{asset('css/landing.css')}}">
+<link rel="stylesheet" href="{{asset('css/app.css')}}">
         <title>Meeting Academy</title>
         
 <!-- CSS only -->
@@ -24,6 +25,10 @@
         </section>
         <section class="own-outstandingEventsSection">
             <x-outstanding-events/>
+        </section>
+        <section>
+            <x-all-events/>
+           
         </section>
         
 

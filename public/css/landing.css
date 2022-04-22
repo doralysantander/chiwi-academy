@@ -266,6 +266,30 @@
 }
 
 
+/*--------------------------all-events clases-------------------------------------------------*/
+
+.own-allEventsSection {
+    position: relative;
+    top: 60px;
+}
+
+.text-1xl {
+    font-size: 30px !important;
+    line-height: 32px;
+}
+
+.text-base {
+  font-size: 14px;
+}
+
+.own-textSizeEvents {
+  font-size: 12px;
+}
+
+.own-cardSize {
+    width: 240px;
+}
+
 @media (min-width: 400px) {
     html {
         font-size: 20px;
