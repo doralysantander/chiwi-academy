@@ -9,9 +9,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MasterclassController;
 
 Route::get('/', function () {
-    return view('home');
-})->middleware('auth')
-->name('home.index');
+    return view('landing');
+});
 
 
 
