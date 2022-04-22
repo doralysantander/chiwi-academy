@@ -11,10 +11,18 @@ class MasterclassController extends Controller
         $master = Masterclass::paginate();
 
         return $master;  // se retorna la wista  con view(vista, compact('variable de consulta'))
+        
+    }
+
+    public function events(){
+        $masterClases = Masterclass::all();
+
+        return view('/table',  compact('masterClases')); 
+        
     }
 
 
-    public function create_master(Request $request ){
+    public function createEvent(Request $request ){
 
         $masterClass = new Masterclass();
 
@@ -34,8 +42,8 @@ class MasterclassController extends Controller
     }
 
 
-    public function update_master(MasterClass $masterClass ){
+    public function edit(MasterClass $masterClass ){
 
-    return  view('/', compact('masterClass')); // se retorna el objeto 
+        return  view('/editEvent', compact('masterClass')); // se retorna el objeto 
     }
 }
