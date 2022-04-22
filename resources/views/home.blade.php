@@ -174,7 +174,7 @@
   </div>
 </div>
 
-
+<x-all-events/>
 
 
 @endsection

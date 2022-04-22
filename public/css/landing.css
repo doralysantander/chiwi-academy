@@ -290,6 +290,7 @@
     width: 240px;
 }
 
+/*
 @media (min-width: 400px) {
     html {
         font-size: 20px;
@@ -324,4 +325,4 @@
     html {
         font-size: 70px;
     }
-}
+} */
