@@ -66,4 +66,6 @@
 
 </div>
 
+<x-footer/>
+
 @endsection

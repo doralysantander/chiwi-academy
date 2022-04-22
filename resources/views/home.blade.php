@@ -176,5 +176,6 @@
 
 <x-all-events/>
 
+<x-footer/>
 
 @endsection

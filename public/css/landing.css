@@ -290,6 +290,18 @@
     width: 240px;
 }
 
+/*--------------------------all-events clases-------------------------------------------------*/
+
+.own-footerSection {
+    position: relative;
+    top: 60px;
+}
+
+.own-icon {
+    width: 40px;
+    height: 40px;
+}
+
 /*
 @media (min-width: 400px) {
     html {
