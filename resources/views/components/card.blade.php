@@ -1,4 +1,4 @@
-<div class="rounded-lg m-1">
+<div class="rounded-lg m-1 flex items-center justify-center">
     
       <div class="max-w-sm rounded overflow-hidden shadow-lg">
           <img class="w-full" src="https://definicion.de/wp-content/uploads/2009/12/paisaje-1.jpg" alt="Sunset in the mountains">
