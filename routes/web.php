@@ -54,4 +54,5 @@ Route::get('master', [MasterclassController::class, 'index']);
 Route::post('event', [MasterclassController::class, 'createEvent'])->name('event.createEvent');
 
 Route::get('event/{masterClass}/edit', [MasterclassController::class, 'edit'])->name('event.edit'); 
-//Route::put('master/{masterClass}', [MasterclassController::class, 'update']);
+Route::put('event/{masterClass}', [MasterclassController::class, 'update'])->name('event.update');
+Route::delete('event/{masterClass}', [MasterclassController::class, 'destroy'])->name('event.destroy');

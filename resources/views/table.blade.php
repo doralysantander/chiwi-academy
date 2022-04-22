@@ -48,10 +48,18 @@
                             <p class="text-gray-500 text-sm font-semibold"> {{$masterClass->descripcion}} </p>
                         </td>
 
-                        <td class="px-6 py-4 text-center"> <span class="text-white text-sm w-1/3 pb-1 bg-orange-600 font-semibold px-2 rounded-full"> 2022-04-10 </span> </td>
+                        <td class="px-6 py-4 text-center"> <span class="text-white text-sm w-1/3 pb-1 bg-orange-600 font-semibold px-2 rounded-full"> {{$masterClass->fecha}} - {{$masterClass->hora}} </span> </td>
                         <td class="px-6 py-4 text-center"> {{$masterClass->numero_participantes}} </td>
                         <td class="px-6 py-4 text-center"> <a href="{{route('event.edit', $masterClass)}}" class="text-orange-600 hover:underline">Editar</a> </td>
-                        <td class="px-6 py-4 text-center"> <a href="#" class="text-red-600 hover:underline">Eliminar</a> </td>
+                        <td>
+                            <form class="px-6 py-4 text-center" action="{{route('event.destroy', $masterClass )}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit"  class="text-red-600 hover:underline">Eliminar</button>
+                            </form>
+                        </td>
+                        
+                        
                     </tr>
 
                     

@@ -24,6 +24,15 @@ class MasterclassController extends Controller
 
     public function createEvent(Request $request ){
 
+        $request->validate([
+            'title' => 'required|max:50',
+            'fecha' => 'required',
+            'hora' => 'required',
+            'participantes' => 'required',
+            'descripcion' => 'required|max:255',
+
+        ]);
+
         $masterClass = new Masterclass();
 
         $masterClass->title = $request->title;
@@ -45,5 +54,38 @@ class MasterclassController extends Controller
     public function edit(MasterClass $masterClass ){
 
         return  view('/editEvent', compact('masterClass')); // se retorna el objeto 
+    }
+
+    public function update(Request $request, MasterClass $masterClass, ){
+        $request->validate([
+            'title' => 'required|max:50',
+            'fecha' => 'required',
+            'hora' => 'required',
+            'participantes' => 'required',
+            'descripcion' => 'required|max:255',
+
+
+        ]);
+
+        $masterClass->title = $request->title;
+        $masterClass->fecha = $request->fecha;
+        $masterClass->hora = $request->hora;
+        $masterClass->descripcion = $request->descripcion;
+        $masterClass->numero_participantes = $request->participantes;
+        $masterClass->imagen_url = $request->imagen;
+  
+        $masterClass->save(); // se guarda el objeto
+
+        return redirect()->route('table');
+        
+    }
+
+
+    public function destroy(MasterClass $masterClass ){
+
+        $masterClass->delete();
+        return redirect()->route('table');
+
+        
     }
 }

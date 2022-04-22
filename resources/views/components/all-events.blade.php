@@ -2,6 +2,17 @@
     <h4 class="mt-3 mb-10 text-4xl text-center text-orange-600 font-bold">
         EVENTOS
     </h4>
+    <div class="flex justify-center">
+        <x-button>
+            Más recientes
+        </x-button>
+        <x-button>
+            Más antiguos
+        </x-button>
+        <x-button>
+            Todos
+        </x-button>
+    </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 align-items-center justify-items-center">
         <x-card/>
         <x-card/>
