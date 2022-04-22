@@ -18,10 +18,9 @@ class MasterclassController extends Controller
 
         $masterClass = new Masterclass();
 
-
+        $masterClass->title = $request->title;
         $masterClass->fecha = $request->fecha;
         $masterClass->hora = $request->hora;
-        $masterClass->fecha = $request->fecha;
         $masterClass->descripcion = $request->descripcion;
         $masterClass->numero_participantes = $request->participantes;
         $masterClass->imagen_url = $request->imagen;
@@ -31,7 +30,7 @@ class MasterclassController extends Controller
 
         $masterClass->save(); // se guarda el objeto 
 
-        return redirect()->route('/');
+        return redirect()->route('table');
     }
 
 
