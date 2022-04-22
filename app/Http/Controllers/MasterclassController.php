@@ -35,21 +35,8 @@ class MasterclassController extends Controller
     }
 
 
-    public function update_master($id ){
+    public function update_master(MasterClass $masterClass ){
 
-        $masterClass = Masterclass::find($id);
-
-
-        // $masterClass->fecha = $request->fecha;
-        // $masterClass->hora = $request->hora;
-        // $masterClass->fecha = $request->fecha;
-        // $masterClass->descripcion = $request->descripcion;
-        // $masterClass->numero_participantes = $request->participantes;
-        // $masterClass->imagen_url = $request->imagen;
-  
-
-
-
-        return $masterClass; // se retorna el objeto 
+    return  view('/', compact('masterClass')); // se retorna el objeto 
     }
 }

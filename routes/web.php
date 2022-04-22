@@ -23,4 +23,5 @@ Route::get('master', [MasterclassController::class, 'index']);
 
 Route::post('master', [MasterclassController::class, 'create_master']);
 
-Route::get('master/{id}/edit', [MasterclassController::class, 'update_master']);
+Route::get('master/{masterClass}/edit', [MasterclassController::class, 'update_master']); 
+Route::put('master/{masterClass}', [MasterclassController::class, 'update']);
