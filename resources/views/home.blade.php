@@ -58,5 +58,7 @@
 
 <x-banner/>
 
+<x-banner2/>
+
 
 @endsection
