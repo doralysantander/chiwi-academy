@@ -35,7 +35,7 @@ Route::get('/logout', [LoginController::class, 'destroy'])
 ->middleware('auth')
 ->name('login.destroy');
 
-Route::get('/table', [AdminController::class, 'index'])
+Route::get('/table', [MasterclassController::class, 'events'])
 ->middleware('auth.admin')
 ->name('table');
 
@@ -51,7 +51,7 @@ Route::get('/createEvent', [CreateEventController::class, 'index'])
 
 Route::get('master', [MasterclassController::class, 'index']);
 
-Route::post('createEvent', [MasterclassController::class, 'create_master']);
+Route::post('event', [MasterclassController::class, 'createEvent'])->name('event.createEvent');
 
-Route::get('master/{masterClass}/edit', [MasterclassController::class, 'update_master']); 
-Route::put('master/{masterClass}', [MasterclassController::class, 'update']);
+Route::get('event/{masterClass}/edit', [MasterclassController::class, 'edit'])->name('event.edit'); 
+//Route::put('master/{masterClass}', [MasterclassController::class, 'update']);

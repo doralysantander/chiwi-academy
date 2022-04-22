@@ -56,5 +56,7 @@
 
 <x-all-events/>
 
+<x-banner/>
+
 
 @endsection

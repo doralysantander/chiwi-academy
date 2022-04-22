@@ -7,13 +7,13 @@
 @section('content')
 
 <div>
-    <h1 class="font-bold text-3xl text-orange-600 py-4 text-center">CREAR EVENTO</h1>
+    <h1 class="font-bold text-3xl text-orange-600 py-4 text-center">EDITAR EVENTO</h1>
     
 </div>
 
 
 <div class="flex justify-center w-full py-10 px-5 md:px-10">
-<form action="{{route('event.createEvent')}}" method="POST">
+<form action="" method="POST">
     @csrf
     <div>
         <div class="flex -mx-3">
@@ -39,7 +39,7 @@
         <div class="flex -mx-3">
             <div class="w-full px-3 mb-5">
                 <label for="" class="font-semibold">Descripción</label>
-                <input name="descripcion" type="text" placeholder="Descripción"
+                <input name="descripcion" type="text" placeholder="Descripción" value="{{$masterClass->descripcion}}"
                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-orange-600">
             </div>
         </div>
