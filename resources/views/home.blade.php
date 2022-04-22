@@ -43,26 +43,22 @@
     <div class="owl-container py-8 px-10 ">
         <div class="owl-carousel owl-theme">
 
-            @component('components.card')
-                @slot('message')
-                    este es un mensaje
-                @endslot
-            @endcomponent
-            @component('components.card')
-                @slot('message')
-                    este es un mensaje
-                @endslot
-            @endcomponent
-
-
-
-
+            @foreach ($masterClases as $item)
+                <x-card :item='$item' />
+            @endforeach
 
 
         </div>
     </div>
 
-    <x-all-events />
-
-
+    @isset($masterClases)
+        @if (sizeof($masterClases))
+            <x-allevents :masterClases="$masterClases" />
+        @else
+            <h1>No hay eventos registrados</h1>
+        @endif
+    @endisset
+    <br/>
+    <br/>
+    <div class="px-6">{{$masterClases->links()}}</div>
 @endsection

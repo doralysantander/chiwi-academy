@@ -7,13 +7,15 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MasterclassController;
-
+/*
 Route::get('/', function () {
     return view('home');
 })->middleware('auth')
 ->name('home.index');
-
-
+*/
+Route::get('/', [MasterclassController::class, 'home'])
+->middleware('auth')
+->name('home.index');
 
 Route::get('/register', [RegisterController::class, 'create'])
 ->middleware('guest')
