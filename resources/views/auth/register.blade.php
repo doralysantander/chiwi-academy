@@ -12,7 +12,7 @@
         <div class="md:flex w-full">
 
             <div class="hidden md:block w-1/2 bg-neutral-900 py-10 px-10">
-               <img src="../assets/ilu.png" />
+               <img src="https://raw.githubusercontent.com/DanielaTob/img/main/ilustracion1.png"/>
             </div>
 
             <div class="w-full md:w-1/2 py-10 px-5 md:px-10">
