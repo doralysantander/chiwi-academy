@@ -19,7 +19,7 @@ class LoginController extends Controller
             ]);
         }else {
             if(auth()->user()->role == 'admin' ){
-                return redirect()->route('table.index');
+                return redirect()->route('table');
             }else{
                 return redirect()->to('/');
             }
