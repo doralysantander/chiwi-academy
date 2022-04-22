@@ -37,7 +37,7 @@
                     <tr>
                         <td class="px-6 py-4">
                             <div class="flex items-center space-x-3">
-                                <div class="inline-flex w-10 h-10"> <img class='w-10 h-10 object-cover rounded-full' alt='User avatar' src='https://i.imgur.com/siKnZP2.jpg' /> </div>
+                                <div class="inline-flex w-10 h-10"> <img class='w-10 h-10 object-cover rounded-full' alt='User avatar' src='https://raw.githubusercontent.com/DanielaTob/img/main/ilustracion3.png' /> </div>
                                 <div>
                                     <p> {{$masterClass->title}} </p>
                                 </div>

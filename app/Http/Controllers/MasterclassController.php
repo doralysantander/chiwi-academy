@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class MasterclassController extends Controller
 {
+    public function home(){
+        $masterClases = Masterclass::paginate(5);
+        return view('home',  compact('masterClases'));
+    }
+
     public function index(){
         $master = Masterclass::paginate();
 
