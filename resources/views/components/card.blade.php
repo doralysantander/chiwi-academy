@@ -8,12 +8,13 @@
             alt="Sunset in the mountains">
         <div class="px-6 py-4">
             <div class="font-bold text-orange-600 text-2xl mb-2">{{ $item->title }}</div>
-            <p class="text-gray-700 text-base">
+            <p class="text-gray-700 text-base h-20 overflow-y-auto">
                 {{ $item->descripcion }}
 
 
             </p>
         </div>
+        {{ $item->register }}
         <div class="flex justify-between px-6 py-4">
             <div>
                 <p class="font-bold text-orange-600">{{ $item->fecha }}</p>
@@ -25,15 +26,18 @@
                     <a href="{{ route('event.edit', $item) }}"
                         class="bg-orange-600 text-white font-bold  p-2 rounded-full">Editar</a>
                 @else
-                    @isset($item->register->user_id)
-                        @if (auth()->user()->id == $item->register->user_id)
-                            {{$item->register}}
-                            <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">cancelar</button>
-                        @else
-                        @endif
+                    @if (isset($item->register[0]->user_id))
+                        <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">cancelar</button>
                     @else
-                        <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">Incribirme</button>
-                    @endisset
+                    <form method="POST" action="{{route('home.create')}}">
+                        {{csrf_field()}}
+                        <input type="hidden" name="masterclass_id" value="{{ $item->id }}" />
+                        <button type="submit" class="bg-orange-600 text-white font-bold  p-2 rounded-full">Incribirme</button>
+                        {{-- <input type="Enroll"> --}}
+                    </form>
+                        
+                    @endif
+
                 @endif
             @endif
 

@@ -23,7 +23,7 @@
                 <div class="flex space-x-7">
                     <div class="flex items-center">
                         <!-- Website Logo -->
-                        <a href="{{ route('home.index') }}" class="sm:text-lg lg:text-2xl font-bold">MEETING
+                        <a href="{{ route('home.index') }}" class="sm:text-lg hover:text-orange-900 lg:text-2xl font-bold">MEETING
                             ACÁDEMY</a>
                     </div>
                     <!-- Primary Navbar items -->

@@ -28,10 +28,7 @@
                             <h3 class="text-black font-bold font-lg  leading-6">Correo electronico</h3>
                             <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">{{ auth()->user()->email }}</p>
                         </div>
-                        <div>
-                            <h3 class="text-black font-bold font-lg  leading-6">Contraseña</h3>
-                            <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">Lorem ipsum dolor sit</p>
-                        </div>
+                        
 
                     </div>
 

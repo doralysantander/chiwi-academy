@@ -36,11 +36,11 @@
     </div>
     </div>
     <div class="flex flex-col text-2xl font-semibold justify-around py-10">
-        <a href="" class="py-2">Home</a>
-        <a href="" class="py-2">Eventod Destacados</a>
-        <a href="" class="py-2">Mis Eventos</a>
-        <a href="" class="py-2">Invitados</a>
-        <a href="" class="py-2">Eventos Recientes</a>
+        <a href="" class="py-2 hover:text-white">Home</a>
+        <a href="" class="py-2 hover:text-white">Eventos Destacados</a>
+        <a href="" class="py-2 hover:text-white">Mis Eventos</a>
+        <a href="" class="py-2 hover:text-white">Invitados</a>
+        <a href="" class="py-2 hover:text-white">Eventos Recientes</a>
     </div>
     </div>
     <div class="flex justify-center">

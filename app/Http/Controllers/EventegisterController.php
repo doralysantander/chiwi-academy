@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\masterclass;
 use App\Models\register;
 use Illuminate\Http\Request;
 
@@ -13,26 +14,21 @@ class EventegisterController extends Controller
     }
 
     public function create(Request $request ){
+        
+       /*  dd(request('masterclass_id')); */
 
         $request->validate([
-            'title' => 'required|max:50',
-            'fecha' => 'required',
-            'hora' => 'required',
-            'participantes' => 'required',
-            'descripcion' => 'required|max:255',
+
+            'masterclass_id' => 'required',
+            
 
         ]);
 
-        $register = new Register();
-        $register->title = $request->title;
-        $register->fecha = $request->fecha;
-        $register->hora = $request->hora;
-        $register->descripcion = $request->descripcion;
-        $register->numero_participantes = $request->participantes;
-        $register->imagen_url = $request->imagen;
+        $event = new Register();
+        $event->masterclass_id = request('masterclass_id');
+        $event->user_id = auth()->user()->id;
+        $event->save(); // se guarda el objeto 
 
-        $register->save(); // se guarda el objeto 
-
-        return redirect()->route('table');
+        return redirect()->route('home.index');
     }
 }
