@@ -17,7 +17,7 @@
 <body>
 
 
-    <nav class="bg-neutral-900 px-6 py-6 text-orange-600 shadow-lg">
+    <nav class="bg-neutral-900 px-6 py-6 text-orange-600 shadow-lg relative">
         <div class="max-w-6xl mx-auto ">
             <div class="flex justify-between">
                 <div class="flex space-x-7">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <!-- Secondary Navbar items -->
-                <div class="hidden md:flex items-center space-x-3 ">
+                <div class="hidden  md:flex items-center space-x-3 ">
 
                     @if (auth()->check())
                         <p class="text-xl "><i class="fa fa-user-circle"></i> <b>{{ auth()->user()->name }}</b> </p>
@@ -70,8 +70,8 @@
             </div>
         </div>
         <!-- mobile menu -->
-        <div class="hidden mobile-menu mt-4">
-            <ul class="">
+        <div class="hidden absolute  md:hidden mobile-menu mt-4">
+            <ul class=" ">
                 <li class="active"><a href="index.html"
                         class="block text-sm px-2 py-4 text-gray-500 hover:bg-orange-600 hover:text-neutral-900 font-bold transition duration-300">Home</a></li>
                 <li><a href="#services"
