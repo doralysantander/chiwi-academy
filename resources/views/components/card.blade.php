@@ -14,6 +14,7 @@
 
             </p>
         </div>
+        {{ $item->register }}
         <div class="flex justify-between px-6 py-4">
             <div>
                 <p class="font-bold text-orange-600">{{ $item->fecha }}</p>
@@ -25,15 +26,12 @@
                     <a href="{{ route('event.edit', $item) }}"
                         class="bg-orange-600 text-white font-bold  p-2 rounded-full">Editar</a>
                 @else
-                    @isset($item->register->user_id)
-                        @if (auth()->user()->id == $item->register->user_id)
-                            {{$item->register}}
-                            <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">cancelar</button>
-                        @else
-                        @endif
+                    @if (isset($item->register[0]->user_id))
+                        <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">cancelar</button>
                     @else
                         <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">Incribirme</button>
-                    @endisset
+                    @endif
+
                 @endif
             @endif
 
