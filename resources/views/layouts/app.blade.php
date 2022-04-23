@@ -98,6 +98,7 @@
 
 
     @yield('content')
+        <x-footer/>
 
 </body>
 <script src="js/jquery.min.js"></script>

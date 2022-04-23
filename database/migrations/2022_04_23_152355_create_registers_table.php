@@ -14,13 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('registers', function (Blueprint $table) {
-            $table->id();
             $table->timestamps();
-            $table->unsignedInteger('id_user');
-            $table->unsignedInteger('id_masterclass');
-            $table->foreign('id_user')->references('id')->on('users');
-            $table->foreign('id_masterclass')->references('id')->on('masterclasses');
-
+            $table->bigInteger('user_id')->unique()->foreign('user_id')->references('id')->on('users');
+            $table->bigInteger('masterclass_id')->unique()->foreign('masterclass_id')->references('id')->on('masterclasses');
+           
+            /*
+            $table->foreignId('iduser')->constrained('users');
+            $table->foreignId('idmasterclass')->constrained('masterclasses');
+            */
         });
     }
 
