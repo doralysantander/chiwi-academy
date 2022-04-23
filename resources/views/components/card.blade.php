@@ -27,9 +27,16 @@
                         class="bg-orange-600 text-white font-bold  p-2 rounded-full">Editar</a>
                 @else
                     @if (isset($item->register[0]->user_id))
-                        <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">cancelar</button>
+                    <form method="POST" action="{{route('home.destroy')}}">
+                        
+                        @csrf
+                        @method('DELETE')
+                        <input type="hidden" name="masterclass_id" value="{{ $item->id }}" />
+                        <button type="submit" class="bg-orange-600 text-white font-bold  p-2 rounded-full">Cancelar</button>
+                        {{-- <input type="Enroll"> --}}
+                    </form>
                     @else
-                    <form method="POST" action="{{route('home.create')}}">
+                    <form method="POST" action="{{route('event.create')}}">
                         {{csrf_field()}}
                         <input type="hidden" name="masterclass_id" value="{{ $item->id }}" />
                         <button type="submit" class="bg-orange-600 text-white font-bold  p-2 rounded-full">Incribirme</button>
