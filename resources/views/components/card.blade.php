@@ -29,7 +29,13 @@
                     @if (isset($item->register[0]->user_id))
                         <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">cancelar</button>
                     @else
-                        <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">Incribirme</button>
+                    <form method="POST" action="{{route('home.create')}}">
+                        {{csrf_field()}}
+                        <input type="hidden" name="masterclass_id" value="{{ $item->id }}" />
+                        <button type="submit" class="bg-orange-600 text-white font-bold  p-2 rounded-full">Incribirme</button>
+                        {{-- <input type="Enroll"> --}}
+                    </form>
+                        
                     @endif
 
                 @endif

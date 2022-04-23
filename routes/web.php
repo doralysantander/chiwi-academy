@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CreateEventController;
+use App\Http\Controllers\EventegisterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
@@ -58,3 +59,6 @@ Route::post('event', [MasterclassController::class, 'createEvent'])->name('event
 Route::get('event/{masterClass}/edit', [MasterclassController::class, 'edit'])->name('event.edit'); 
 Route::put('event/{masterClass}', [MasterclassController::class, 'update'])->name('event.update');
 Route::delete('event/{masterClass}', [MasterclassController::class, 'destroy'])->name('event.destroy');
+
+
+Route::post('home', [EventegisterController::class, 'create'])->name('home.create');
