@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('masterclasses', function (Blueprint $table) {
-            $table->id();
+            $table->id('id');
             $table->string('title')->nullable();
             $table->boolean('estado')->nullable();
             $table->date('fecha');
@@ -22,9 +22,8 @@ return new class extends Migration
             $table->integer('numero_participantes');
             $table->char('descripcion', 100);
             $table->string('imagen_url')->nullable();
-            
-
             $table->timestamps();
+            
         });
     }
 
