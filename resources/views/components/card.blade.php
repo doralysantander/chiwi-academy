@@ -7,7 +7,7 @@
             alt="Sunset in the mountains">
         <div class="px-6 py-4">
             <div class="font-bold text-orange-600 text-2xl mb-2">{{ $item->title }}</div>
-            <p class="text-gray-700 text-base">
+            <p class="text-gray-700 text-base h-20 overflow-y-auto">
                 {{ $item->descripcion }}
             </p>
         </div>
@@ -19,9 +19,9 @@
 
             @if (auth()->check())
                 @if (auth()->user()->role === 'admin')
-                    <a href="{{route('event.edit', $item)}}" class="bg-orange-600 text-white font-bold  p-2 rounded-full">Editar</a>
+                    <a href="{{route('event.edit', $item)}}" class="bg-orange-600 hover:text-white text-white font-bold  p-2 rounded-full">Editar</a>
                 @else
-                    <button class="bg-orange-600 text-white font-bold  p-2 rounded-full">Inscribirme</button>
+                    <button class="bg-orange-600 text-white hover:text-white font-bold  p-2 rounded-full">Inscribirme</button>
                 @endif
             @endif
 

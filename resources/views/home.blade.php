@@ -60,6 +60,8 @@
     @endisset
     <br/>
     <br/>
-    <div class="px-6">{{$masterClases->links()}}</div>
+    <div class="px-6">
+      <div>{{$masterClases->links()}}</div>
+    </div>
    
 @endsection
