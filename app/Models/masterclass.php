@@ -11,7 +11,7 @@ class masterclass extends Model
     use HasFactory;
 
     public function register(){
-        return $this->hasMany(Register::class)->select('user_id', 'masterclass_id');
+        return $this->hasMany(Register::class)->select('user_id', 'masterclass_id')->where('user_id',auth()->user()->id);
         
     }
 }

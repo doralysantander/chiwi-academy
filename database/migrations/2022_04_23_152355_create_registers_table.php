@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('registers', function (Blueprint $table) {
             $table->timestamps();
-            $table->bigInteger('user_id')->unique()->foreign('user_id')->references('id')->on('users');
-            $table->bigInteger('masterclass_id')->unique()->foreign('masterclass_id')->references('id')->on('masterclasses');
-           
+            $table->bigInteger('user_id')->foreign('user_id')->references('id')->on('users');
+            $table->bigInteger('masterclass_id')->foreign('masterclass_id')->references('id')->on('masterclasses');
+            $table->primary(['user_id', 'masterclass_id']);
             /*
             $table->foreignId('iduser')->constrained('users');
             $table->foreignId('idmasterclass')->constrained('masterclasses');
