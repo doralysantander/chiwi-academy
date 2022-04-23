@@ -19,6 +19,13 @@ class MasterclassController extends Controller
         
     }
 
+    public function profile(){
+        $masterClases = Masterclass::all();
+
+        return view('/livewire/profile',  compact('masterClases')); 
+        
+    }
+
     public function events(){
         $masterClases = Masterclass::all();
 
