@@ -42,7 +42,7 @@ Route::get('/table', [MasterclassController::class, 'events'])
 ->middleware('auth.admin')
 ->name('table');
 
-Route::get('/profile', [EventegisterController::class, 'profile'])
+Route::get('/profile', [MasterclassController::class, 'profile'])
 ->middleware('auth')
 ->name('profile.index');
 

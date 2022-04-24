@@ -14,7 +14,7 @@
 
             </p>
         </div>
-        {{ $item->register }}
+        <!--{{ $item->register }}-->
         <div class="flex justify-between px-6 py-4">
             <div>
                 <p class="font-bold text-orange-600">{{ $item->fecha }}</p>
@@ -32,7 +32,7 @@
                         @csrf
                         @method('DELETE')
                         <input type="hidden" name="masterclass_id" value="{{ $item->id }}" />
-                        <button type="submit" class="bg-orange-600 text-white font-bold  p-2 rounded-full">Cancelar</button>
+                        <button type="submit" class="bg-red-600 text-white font-bold  p-2 rounded-full">Cancelar</button>
                         {{-- <input type="Enroll"> --}}
                     </form>
                     @else
