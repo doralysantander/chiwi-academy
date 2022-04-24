@@ -7,10 +7,13 @@
         <img class="w-full" src="https://definicion.de/wp-content/uploads/2009/12/paisaje-1.jpg"
             alt="Sunset in the mountains">
         <div class="px-6 py-4">
-            <div class="font-bold text-orange-600 text-2xl mb-2">{{ $item->title }}</div>
-            <p class="text-gray-700 text-base h-20 overflow-y-auto">
-                {{ $item->descripcion }}
 
+            <div class="flex justify-between mb-2 items-center">
+                <p class="font-bold text-orange-600 text-2xl ">{{ $item->title }}</p>
+                <p>{{count($item->count_register)}}/{{$item->numero_participantes}}</p>
+            </div>
+            <p class="text-gray-700 text-base h-20 overflow-y-auto">
+               {{ $item->descripcion }}
 
             </p>
         </div>

@@ -19,4 +19,8 @@ class masterclass extends Model
     public function user_masterclass(){
         return $this->belongsToMany(User::class, Register::class);
     }
+
+    public function count_register(){
+        return $this->hasMany(Register::class);
+    }
 }
