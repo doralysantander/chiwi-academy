@@ -42,6 +42,12 @@ Route::get('/table', [MasterclassController::class, 'events'])
 ->middleware('auth.admin')
 ->name('table');
 
+Route::get('/table/{masterClass}', [MasterclassController::class, 'destacar'])
+->middleware('auth.admin')
+->name('destacar');
+
+
+
 Route::get('/profile', [MasterclassController::class, 'profile'])
 ->middleware('auth')
 ->name('profile.index');
@@ -63,3 +69,6 @@ Route::delete('event/{masterClass}', [MasterclassController::class, 'destroy'])-
 
 Route::post('/', [EventegisterController::class, 'createEvent'])->name('event.create');
 Route::delete('/', [EventegisterController::class, 'destroy'])->name('home.destroy');
+Route::get('/recientes', [EventegisterController::class, 'recientes'])->name('event.recientes');
+Route::get('/antiguos', [EventegisterController::class, 'antiguos'])->name('event.antiguos');
+Route::get('/todos', [EventegisterController::class, 'todos'])->name('event.todos');

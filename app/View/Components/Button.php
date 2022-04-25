@@ -11,9 +11,11 @@ class Button extends Component
      *
      * @return void
      */
-    public function __construct()
+    var $url;
+
+    public function __construct($link)
     {
-        //
+        $this->url=$link;
     }
 
     /**

@@ -66,4 +66,27 @@ class EventegisterController extends Controller
         return view('/livewire/profile',  compact('master')); 
         
     }
+
+    public function recientes(){
+        $masterClases = Masterclass::paginate(5);
+     
+        
+        $masterClases2 = Masterclass::all()->where('destacado',1);
+        return view('home',  compact('masterClases','masterClases2'));
+    }
+    public function antiguos(){
+        $masterClases = Masterclass::paginate(5);
+        
+      
+        $masterClases2 = Masterclass::all()->where('destacado',1);
+        return view('home',  compact('masterClases','masterClases2'));
+    }
+    public function todos(){
+        $masterClases = Masterclass::paginate(5);
+        $masterClases2 = Masterclass::all()->where('destacado',1);
+        return view('home',  compact('masterClases','masterClases2'));
+    }
+
+
+    
 }

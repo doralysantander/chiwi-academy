@@ -37,13 +37,18 @@
 
     {{-- SLIDER --}}
 
-    <h2 class="text-4xl font-bold text-orange-600 text-center pt-20 p-4"> EVENTOS DESTACADOS </h2>
+    @if (count($masterClases2)>0)
+    
+        <h2 class="text-4xl font-bold text-orange-600 text-center pt-20 p-4"> EVENTOS DESTACADOS </h2>
+    @else
+        <x-banner2/>
+    @endif
 
 
     <div class="owl-container py-8 px-10 ">
         <div class="owl-carousel owl-theme">
 
-            @foreach ($masterClases as $item)
+            @foreach ($masterClases2 as $item)
                 <x-card :item='$item' />
             @endforeach
 

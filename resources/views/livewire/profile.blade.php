@@ -55,11 +55,10 @@
                 <div>
                     <h1 class="lg:text-4xl font-bold text-orange-600">Mis eventos</h1>
                     <div class="grid sm:grid-cols-2 xl:grid-cols-3">
-                    
+                        
                         @foreach ($masterClases as $item)
                             @isset($item->user_masterclass[0])
                                 <x-card :item='$item'/>
-                                
                             @endisset
                         @endforeach
     
