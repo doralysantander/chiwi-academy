@@ -1,9 +1,9 @@
 @props(['masterClases'=>$masterClases])
-<div class="own-allEventsSection d-flex flex-column align-items-center p-4">
+<div id="eventos"  class="own-allEventsSection d-flex flex-column align-items-center p-4">
     <h4 class="mt-3 mb-10 text-4xl text-center text-orange-600 font-bold">
         EVENTOS
     </h4>
-    <div class="flex justify-center">
+    <div class="flex justify-center flex-wrap">
         <x-button link='event.recientes'>
             Más recientes
         </x-button>
