@@ -142,7 +142,7 @@ ___
 
 ## deploy 
 **Heroku** 📜
-- **[HEROKU]( https://chiwi-academy.herokuapp.com/)**
+- **[HEROKU]( http://meetingacademy.herokuapp.com/login)**
 ---
 
 **GITHUB** :octocat:
@@ -154,16 +154,12 @@ ___
 ## 💻 Tecnologies :
 ___
 
-<div align="center">
-
-[![][logo-url]][repo-url]  
-
-**Tailwind CSS Components**  
-[ [See repo ↗︎][repo-url] ]
-  
-
-</div>
-
+- Laravel
+- PHP
+- HTML
+- Tailwindcss
+- Bootstrap
+- MySQL
 
 ____
 ----
