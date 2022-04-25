@@ -23,11 +23,11 @@
                     LOS MEJORES EVENTOS ONLINE
                 </p>
                 <div class="mt-5 pt-10 sm:mt-8 sm:flex justify-center">
-                    <button
+                    <a href="#events"> <button 
                         class="p-0 w-12 h-12 bg-orange-600 rounded-full hover:bg-orange-700 active:shadow-lg mouse shadow transition ease-in duration-200 focus:outline-none">
                         <i class='fa fa-arrow-down text-white'></i>
                     </button>
-
+                </a>
                 </div>
             </div>
         </main>
@@ -45,7 +45,7 @@
     @endif
 
 
-    <div class="owl-container py-8 px-10 ">
+    <div id="events" class="owl-container py-8 px-10 ">
         <div class="owl-carousel owl-theme">
 
             @foreach ($masterClases2 as $item)

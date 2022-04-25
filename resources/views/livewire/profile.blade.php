@@ -15,7 +15,7 @@
                     <div class="bg-white sm:flex sm:flex-col sm:items-center md:block  p-3 border-t-4 border-orange-600">
                         <div class="image  sm:w-[50%] md:w-auto  overflow-hidden rounded-full">
                             <img class="h-auto w-full mx-auto"
-                                src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
+                                src="https://raw.githubusercontent.com/DanielaTob/img/main/user.png"
                                 alt="">
                         </div>
                         <h1 class="text-black font-bold text-xl leading-8 my-1">Informacion Personal</h1>
@@ -36,18 +36,6 @@
 
                         </div>
 
-
-                        <ul
-                            class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
-                            <li class="flex items-center py-3">
-                                <span>Opciones</span>
-                                <span class="ml-auto">
-                                    <span class="bg-orange-600 py-1 px-2 rounded text-white text-sm">Editar</span>
-                                    <span class="bg-orange-600 py-1 px-2 rounded text-white text-sm">Eliminar</span>
-                                </span>
-                            </li>
-
-                        </ul>
 
                     </div>
 
