@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}"/> 
-    <link rel="stylesheet" href="{{asset('css/landing.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/landing.css') }}">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
@@ -17,13 +17,14 @@
 <body>
 
 
-    <nav class="bg-neutral-900 px-6 py-6 text-orange-600 shadow-lg">
+    <nav class="bg-neutral-900 px-6 py-6 text-orange-600 shadow-lg relative">
         <div class="max-w-6xl mx-auto ">
             <div class="flex justify-between">
                 <div class="flex space-x-7">
                     <div class="flex items-center">
                         <!-- Website Logo -->
-                        <a href="{{ route('home.index') }}" class="sm:text-lg hover:text-orange-900 lg:text-2xl font-bold">MEETING
+                        <a href="{{ route('home.index') }}"
+                            class="sm:text-lg hover:text-orange-900 lg:text-2xl font-bold">MEETING
                             ACÁDEMY</a>
                     </div>
                     <!-- Primary Navbar items -->
@@ -43,10 +44,13 @@
                     </div>
                 </div>
                 <!-- Secondary Navbar items -->
-                <div class="hidden md:flex items-center space-x-3 ">
+
+
+                <div class="hidden  md:flex items-center space-x-3 ">
 
                     @if (auth()->check())
-                        <p class="text-xl "><i class="fa fa-user-circle"></i> <b>{{ auth()->user()->name }}</b> </p>
+                        <p class="text-xl "><i class="fa fa-user-circle"></i> <b>{{ auth()->user()->name }}</b>
+                        </p>
                         <a href="{{ route('login.destroy') }}"
                             class="font-semibold text-gray-500 rounded-md hover:text-neutral-900 hover:bg-orange-600 hover:rounded-md py-3 px-4">Cerrar
                             Sesión</a>
@@ -70,17 +74,44 @@
             </div>
         </div>
         <!-- mobile menu -->
-        <div class="hidden mobile-menu mt-4">
-            <ul class="">
-                <li class="active"><a href="index.html"
-                        class="block text-sm px-2 py-4 text-gray-500 hover:bg-orange-600 hover:text-neutral-900 font-bold transition duration-300">Home</a></li>
-                <li><a href="#services"
-                        class="block text-sm px-2 py-4 text-gray-500 hover:bg-orange-600 hover:text-neutral-900 font-bold transition duration-300">Services</a></li>
-                <li><a href="#about"
-                        class="block text-sm px-2 py-4 text-gray-500 hover:bg-orange-600 hover:text-neutral-900  font-bold transition duration-300">About</a></li>
-                <li><a href="#contact"
-                        class="block text-sm px-2 py-4 text-gray-500 hover:bg-orange-600 hover:text-neutral-900  font-bold transition duration-300">Contact Us</a>
+        <div class="hidden absolute  md:hidden mobile-menu mt-4 z-20 bg-neutral-900 w-full left-0">
+            <ul class="px-4 ">
+                <li class="active"><a href="{{ route('home.index') }}"
+                        class="block text-sm px-2 py-4 text-gray-500 hover:bg-orange-600 hover:text-neutral-900 font-bold transition duration-300">Home</a>
                 </li>
+
+                @if (auth()->check())
+                    @if (auth()->user()->role === 'admin')
+                        <li><a href="{{ route('table') }}"
+                                class="block text-sm px-2 py-4 text-gray-500 hover:bg-orange-600 hover:text-neutral-900 font-bold transition duration-300">Administrar</a>
+                        </li>
+                    @else
+                        <li><a href="{{ route('profile.index') }}"
+                                class="block text-sm px-2 py-4 text-gray-500 hover:bg-orange-600 hover:text-neutral-900 font-bold transition duration-300">Perfil</a>
+                        </li>
+                    @endif
+
+                @endif
+
+
+                @if (auth()->check())
+                    <li class="flex justify-between items-center">
+                        <p class="text-xl "><i class="fa fa-user-circle"></i> <b>{{ auth()->user()->name }}</b>
+                        </p>
+                        <a href="{{ route('login.destroy') }}"
+                            class="block text-sm px-2 py-4 text-gray-500 hover:bg-orange-600 hover:text-neutral-900  font-bold transition duration-300">Cerrar
+                            sesion</a>
+                    </li>
+                @else
+                    <li><a href="{{ route('register.index') }}"
+                            class="block text-sm px-2 py-4 text-gray-500 hover:bg-orange-600 hover:text-neutral-900  font-bold transition duration-300">Registro
+                        </a>
+                    </li>
+                    <li><a href="{{ route('login.index') }}"
+                            class="block text-sm px-2 py-4 text-gray-500 hover:bg-orange-600 hover:text-neutral-900  font-bold transition duration-300">Ingresar
+                        </a>
+                    </li>
+                @endif
             </ul>
         </div>
         <script>
@@ -98,7 +129,7 @@
 
 
     @yield('content')
-        <x-footer/>
+    <x-footer />
 
 </body>
 <script src="js/jquery.min.js"></script>

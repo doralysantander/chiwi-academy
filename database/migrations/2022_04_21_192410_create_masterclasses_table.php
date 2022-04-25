@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id('id');
             $table->string('title')->nullable();
             $table->boolean('estado')->nullable();
+            $table->boolean('destacado')->default(0);
             $table->date('fecha');
             $table->time('hora');
             $table->integer('numero_participantes');

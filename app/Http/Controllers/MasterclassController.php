@@ -9,7 +9,8 @@ class MasterclassController extends Controller
 {
     public function home(){
         $masterClases = Masterclass::paginate(5);
-        return view('home',  compact('masterClases'));
+        $masterClases2 = Masterclass::all()->where('destacado',1);
+        return view('home',  compact('masterClases','masterClases2'));
     }
 
     public function index(){
@@ -19,10 +20,32 @@ class MasterclassController extends Controller
         
     }
 
+    public function profile(){
+        $masterClases = Masterclass::all();
+
+        return view('/livewire/profile',  compact('masterClases')); 
+        
+    }
+
     public function events(){
         $masterClases = Masterclass::all();
 
         return view('/table',  compact('masterClases')); 
+        
+    }
+
+    public function destacar(MasterClass $masterClass){
+
+        if($masterClass->destacado==0){
+            $masterClass->destacado=1;
+        }else{
+            $masterClass->destacado=0;
+        }
+        
+        $masterClass->save();
+        $masterClases = Masterclass::all();
+        return view('/table',  compact('masterClases')); 
+        
         
     }
 

@@ -15,7 +15,8 @@ class EventegisterController extends Controller
         
     }
 
-    public function create(Request $request ){
+    public function createEvent(Request $request ){
+        
         
        /*  dd(request('masterclass_id')); */
 
@@ -35,4 +36,61 @@ class EventegisterController extends Controller
 
         return redirect()->route('home.index');
     }
+
+
+    public function destroy(Request $request){
+        
+
+        $request->validate([
+
+            'masterclass_id' => 'required',
+            
+
+        ]);
+       
+        $master_id = request('masterclass_id');
+
+        $id = auth()->user()->id;
+
+       
+        Register::where('user_id', $id )->where('masterclass_id', $master_id )->delete();
+
+        
+        return redirect()->route('home.index');
+
+        
+    }
+
+    public function profile(){
+        $id = auth()->user()->id;
+        $master = Register::all()->where('user_id',$id );
+
+        //dd($master);
+
+        return view('/livewire/profile',  compact('master')); 
+        
+    }
+
+    public function recientes(){
+        $masterClases = Masterclass::paginate(5);
+     
+        
+        $masterClases2 = Masterclass::all()->where('destacado',1);
+        return view('home',  compact('masterClases','masterClases2'));
+    }
+    public function antiguos(){
+        $masterClases = Masterclass::paginate(5);
+        
+      
+        $masterClases2 = Masterclass::all()->where('destacado',1);
+        return view('home',  compact('masterClases','masterClases2'));
+    }
+    public function todos(){
+        $masterClases = Masterclass::paginate(5);
+        $masterClases2 = Masterclass::all()->where('destacado',1);
+        return view('home',  compact('masterClases','masterClases2'));
+    }
+
+
+    
 }
